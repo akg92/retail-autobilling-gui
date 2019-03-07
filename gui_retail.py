@@ -8,9 +8,8 @@ top.attributes("-zoom", True)
 top.title = 'Retail-Billing'
 #top.geometry('1200x1200')
 img_c_width = 400
-img_c_height = 200
+img_c_height = 500
 canvas = Canvas(top, width=img_c_width,height=500, bd=0,bg='white')
-
 canvas.grid(row=1, column=0)
 
 
@@ -21,7 +20,7 @@ def showImg():
     load = Image.open(e.get())
     w, h = load.size
     load = load.resize((img_c_width, img_c_height))
-    imgfile = ImageTk.PhotoImage(load )
+    imgfile = ImageTk.PhotoImage(load)
     
     canvas.image = imgfile  # <--- keep reference of your image
     canvas.create_image(2,2,anchor='nw',image=imgfile)
@@ -40,7 +39,7 @@ def plot_bill(t,data):
     headers = ["Name","Items","Unit Price","Total"]
     c = 0
     for header in headers:
-        b = Entry(t, font=medium_font)
+        b = Entry(t, font=medium_font,bd=0)
         b.insert(0, header)
         b.grid(row=0, column=c)
         c +=1
@@ -50,10 +49,10 @@ def plot_bill(t,data):
     rows = len(data)
     cols = 4
 
-    total = 25.00
+    total = 32.00
     for i in range(rows):
         for j in range(cols):
-            b = Entry(t,text=data[i][j],font=medium_font)
+            b = Entry(t,bd=0,font=medium_font)
             b.delete(0, tkinter.END)
             b.insert(0,str(data[i][j]))
             b.grid(row=i+1,column=j)
@@ -72,7 +71,7 @@ def Predict():
     textvar = "Total bill is {}".format(121.01)
     # t1.delete(0.0, tkinter.END)
     # t1.insert('insert', textvar+'\n')
-    dummy_data = [["sample1",10,1,10],["sample2",2,1,2]]
+    dummy_data = [["sample1",10,1,10],["sample2",2,1,2],["sample3",10,1,10],["sample4",10,1,10]]
     plot_bill(t2,dummy_data)
     #t1.update()
     
