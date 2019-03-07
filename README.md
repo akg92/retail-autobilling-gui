@@ -1,1 +1,1 @@
-# retail-autobilling-gui
+# Python UI Development Example
