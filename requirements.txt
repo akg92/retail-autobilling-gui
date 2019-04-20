@@ -1,4 +1,8 @@
+numpy==1.15
 tensorflow
 keras
+easydict
 pycocotools
 Cython
+matplotlib
+opencv-python
