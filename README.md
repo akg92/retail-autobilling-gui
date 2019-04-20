@@ -17,7 +17,7 @@ python gui_retail.py multi
 * The realistic approach. 
 * As of now, the C-GAN is not used to reduce the gap between the actual dataset and generated.
 #### How to run??
-python gui_retail.py multi
+python gui_retail.py single
 
 
 ## Demo data.
