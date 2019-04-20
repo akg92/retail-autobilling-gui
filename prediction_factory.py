@@ -47,7 +47,7 @@ class BasePrediction():
 class Multi(BasePrediction):
 
     FILE_LOCATION ='model/multi.h5'
-    PREDICTION_CONFIDENCE = 0.5
+    PREDICTION_CONFIDENCE = 0.50
     model = None
     def __init__(self):
         BasePrediction.__init__(self)

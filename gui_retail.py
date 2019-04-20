@@ -151,6 +151,7 @@ def plot_bill(t,data):
 def Predict():
     img_path = e.get()
     textvar = "Total bill is {}".format(121.01)
+    print(img_path)
     if model_type=='single':
         model = Single()
     else:
